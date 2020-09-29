@@ -1,0 +1,14 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+
+.rewardList {
+  display: flex;
+
+  & > div {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 11px;
+    }
+  }
+}

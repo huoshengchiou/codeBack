@@ -1,0 +1,408 @@
+@import "src/components/App/mixins";
+@import "src/components/App/theme";
+
+
+//define mixin
+
+@mixin borderBottomSet {
+     border-bottom: 0.5px solid #d5d7d7;
+}
+//definevari
+
+$innerWidth:800px; 
+$borderColor:#c7c5c5;
+
+
+.outWrapper{
+     width: $innerWidth;
+     padding: 0;
+     @media (max-width: #{$bp_mobile}) {
+          width: 90vw;             
+     }
+}
+
+.antRWD {
+     color: black;
+     
+     @media (max-width: #{$bp_mobile}) {
+          width: 100%;  
+          > div {
+               width: 100%
+          }           
+     }
+}
+.innerWrapper{
+     width: 100%;
+     border: 0.5px solid #d5d7d7;
+     padding: 0 15px 25px 15px;
+     margin-top: 15px;
+     background-color: #fafafa;
+     //統一字體大小
+     h3{
+           font-size: 14px;
+     }
+     h5 {
+          font-weight: 400;
+     }
+     input {
+          background-color: #FFF;
+     }
+     //--------------分隔線-------------
+     .seperateLine{
+          width: 100%;
+          border-bottom: 0.5px solid #d5d7d7;
+          margin-top: 28px;
+
+     }
+     .location{
+          width: 100%;
+          @include borderBottomSet;
+          // border-bottom: 0.5px solid $borderColor;
+          span{
+               vertical-align: middle;
+          }
+          p{
+               margin-left: 10px;
+               display: inline-block;
+               color: #666666;
+               vertical-align: middle;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 65vw;
+                    margin-top: 0;             
+               }
+
+          }
+     }
+     .basicInfo{
+          width: 100%;
+          @include borderBottomSet;
+          // border-bottom: 0.5px solid $borderColor;
+          padding: 28px 0;
+          h3{
+               display: inline-block;
+               margin: 0px;
+               line-height: 14px;
+               span{
+                    margin-left: 10px;
+                    color: #cd2524;
+                    font-weight: 300;
+               }
+          }
+          .basicPart1{
+               width: 50%;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;             
+               }
+               .basicInp{
+                    margin-top: 17px;
+               }
+          }
+          .basicPart2{
+               width: 62%;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;             
+               }
+               .phoneNum{
+                    margin-top: 17px;
+                    display: flex;
+                    // @media (max-width: #{$bp_mobile}) {
+                    //         flex-direction: column;
+                    // }
+                    .phNum1{
+                         width: 30%;
+                         // flex-grow: 1; 
+                         .countryNumhold{
+                              font-weight: 700;
+                              padding-right: 10px;
+                              vertical-align: sub;
+                              @media (max-width: #{$bp_mobile}) {
+                                   padding-right: 5px;
+                              }
+
+                         }
+                         .countryNum1{
+                              width: 80%;
+                              display: inline-block;
+                              vertical-align: top; 
+
+                              
+                         }
+                    }
+                    .phNum2{
+                         margin-left: 10px;
+                         width: 65%;
+                         // flex-grow: 3;
+                         @media (max-width: #{$bp_mobile}) {
+                              width: 70%;
+                              // flex-grow: 2;
+                         }
+                    }
+
+
+               }
+          }
+          .basicPart3{
+               width: 55%;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;             
+               }
+               .birth{
+                    width: 100%;
+                    list-style: none;
+                    display: flex;
+                    padding: 0;
+                    li{
+                         width: 25%;    
+                         &:nth-child(2){
+                              margin-left: 10px;
+                         }
+                         &:nth-child(3){
+                              margin-left: 10px;
+                         }
+                    }
+                    
+               }
+          }
+     }
+
+     .education{
+          width: 100%;
+          @include borderBottomSet;
+          // border-bottom: 0.5px solid $borderColor;
+          .educationUnit{
+               width: 50%;
+               padding: 0;
+               list-style: none;
+               margin: 28px 0;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;             
+               }
+               li{
+               margin-top: 17px;
+                    &:nth-child(2){
+                     width: 50%;                    
+                    }
+                    &:nth-child(4){
+                         width: 100%;
+                         display: flex;
+                        ul{
+                             width: 100%;
+                             padding: 0;
+                             list-style: none;
+                             display: flex;
+                             margin: 0;
+                             li{
+                                  width: 50%;
+                                  margin: 0;
+                                  &:nth-child(2){
+                                       margin-left: 10px;
+                                  }  
+                              }
+                            
+                         }                   
+                    }
+               }
+
+               
+          }
+          
+
+     }
+     .experience{
+          width: 100%;
+          @include borderBottomSet;
+          // border-bottom: 0.5px solid $borderColor;
+          h5{
+               display: inline-block;
+               margin-bottom: 0;
+          }
+          .experienceUnit{
+               width: 50%;
+               padding: 0;
+               list-style: none;
+               margin: 28px 0;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;             
+               }
+               li{
+                    margin-top: 17px;
+                    ul{
+                         width: 100%;
+                         padding: 0;
+                         list-style: none;
+                         display: flex;
+                         li{
+                              width: 50%;
+                                  margin: 0;
+                                  &:nth-child(2){
+                                       margin-left: 10px;
+                                  }  
+                         }
+                    }
+               } 
+          }
+     }
+     .resume{
+          width: 100%;
+          .resumeUnit{
+               width: 90%;
+               padding: 0;
+               list-style: none;
+               margin: 28px 0;
+               li{
+                width: 100%;
+                    &:nth-child(1){
+                         display: flex;
+                         align-items: center;
+                         margin-bottom: 17px;
+                         @media (max-width: #{$bp_mobile}) {
+                              flex-wrap: wrap;                         
+                         }
+                         &::before{
+                              content: "";
+                              display: inline-block;
+                              height: 100%;
+                              width: 0;
+                              vertical-align: middle; 
+                         }
+                         h5 {
+                              display: inline-block;
+                              vertical-align: middle; 
+                              margin: 0;
+                         }
+                         span{
+                              color: #666666;
+                              vertical-align: middle;
+                              &.inactive{display: none;}
+                              .resumeDelIcon{
+                                   width: 14px;
+                                   height: 18px;
+                                   display: inline-block;
+                                   // background: mediumorchid;
+                                   margin-left: 10px;
+                                   vertical-align: middle;
+                                   cursor: pointer;
+                              }                           
+                         } 
+                         button {
+                              margin: 0 0 0 10px;
+                         }
+                         //上傳button   
+                         .resumebtn{
+                              display: inline-block;
+                              width: 96px;
+                              margin-left: 10px;
+                              padding-bottom: 3px;
+                              vertical-align: middle;
+                              // background: red;
+                              @media (max-width: #{$bp_mobile}) {
+                                   margin-left: 0;
+                                   margin-top: 2vh;                                 
+                              }
+                            
+                         }
+                         //上傳檔案list
+                         .upfilelist{
+                              width: 35%;
+                              // height: 200px;
+                              // background: lightcyan;
+                              margin-left: 10px;
+                              padding: 0;
+                              list-style: none;
+                              font-size: 13px;
+                              @media (max-width: #{$bp_mobile}) {
+                                width: 80%;             
+                              }
+                              li{
+                                   margin: 0;
+                                   width: 100%;
+                                   margin-top: 10px;
+                                   @media (max-width: #{$bp_mobile}) {
+                                        margin-top: 4vh;                                 
+                                   }
+                                   .resumeDelIcon{
+                                   width: 14px;
+                                   height: 18px;
+                                   display: inline-block;
+                                   // background: mediumorchid;
+                                   margin-left: 10px;
+                                   vertical-align: middle;
+                                   cursor: pointer;
+                                
+                                    }    
+                                   span{
+                                        &:nth-child(1){
+                                         overflow : hidden;
+                                         text-overflow : ellipsis;
+                                         white-space :nowrap;                                             
+                                        }
+                                        &:nth-child(2){
+                                        margin-left: 5px;
+                                        }
+                                   }
+                              }
+                         }
+                         
+
+                    }
+                    &:nth-child(2){
+                         // width: 100%;
+                         margin-bottom: 10px;
+                         .uploadfilewaring{
+                          font-size: 13px;
+                          font-weight: 300;
+                          color: rgb(205,37,36);
+                         }
+  
+                    }
+                    &:nth-child(3){
+                       width: 60%;
+
+                    }
+                    &:nth-child(4){
+                         width: 111%;
+  
+                      }
+                    &:nth-child(5){
+                         display: flex;
+                         position: relative;
+                         .checkarea{
+                              width: 30%;
+                              @media (max-width: #{$bp_mobile}) {
+                                   width: 100%;             
+                              }
+                         }
+                       
+                         span{
+                              cursor: default;
+                         }
+                         //隱私權
+                         // a{
+                         //      display: inline-block;
+                         //      text-decoration: none;
+                         //      font-size: 13px;
+                         //      color: #0073e6;
+                         //      position: absolute;
+                         //      left: 8.5vw;
+                         //      @media (max-width: #{$bp_mobile}) {
+                         //         left: 30vw;             
+                         //      }
+                         // }  
+                    }
+               }
+                      
+          } 
+     }
+     // .subbtn{
+     //      width: 100%;
+     //      margin-left: 50%;
+     //      background: #cd2524;
+     // }
+}
+
+.subbtn{
+     width: 21%;
+     margin-top: 10px;
+     margin-left: 300px;
+     // background: #cd2524;
+}

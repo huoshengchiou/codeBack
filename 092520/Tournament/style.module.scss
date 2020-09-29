@@ -1,0 +1,106 @@
+@import "src/components/App/theme";
+
+.innerContainer {
+     margin-top: 15px;
+}
+
+.clubTopNav{
+     background-color:grey;
+     color:white;
+     position: relative;
+     width: 100%;
+     padding: 0 !important;
+    //  pointer-events: none;
+     .topName{
+         width: $full;
+         height: 70px;
+         background-color: #051d35;
+         border-bottom:1px solid #394958;
+        //  z-index: 999;
+         .inner{
+             width: $full;
+             height: $full;
+             max-width: $width;
+             margin: 0 auto;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             align-content: center;
+             .left{
+                 display: flex;
+                 justify-content: flex-start;
+                 align-items: center;
+                 .userHead{
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     width: 48px;
+                     height: 48px;
+                     background-image: linear-gradient(to top, #0073e6, #00ccaa);
+                     border-radius: $full / 2;
+                     .userInnerHead{
+                         width: 46px;
+                         height: 46px;
+                         border-radius: $full / 2;
+                         background-color: $white;
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         .img{
+                             width: 42px;
+                             height: 42px;
+                             overflow: hidden;
+                             border-radius: $full / 2;
+                             display: flex;
+                             justify-content: center;
+                             align-items: center;
+                             img{
+                                 width: $full;
+                             }
+                         }
+                     }
+                 }
+                 .userName{
+                     font-size: 14px;
+                     padding-left: 10px;
+                     font-weight: 300;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 2.57;
+                     letter-spacing: -0.07px;
+                     text-align: left;
+                     color: #0073e6;
+                     cursor: pointer;
+                     position: relative;
+                     &::before{
+                         content: ' < ';
+                         position: absolute;
+                         left: -5px;
+                     }
+                 }
+             }
+             .right{
+                 button{
+                     display: inline;
+                     border:1px solid $white;
+                     background: none;
+                     min-width: none;
+                     background-color: rgba(255,255,255,0);
+                     margin: 5px 0 5px 20px;
+                     cursor: pointer;
+                     &:hover{
+                         background-color: rgba(255,255,255,0.15);
+                     }
+                     img{
+                         position: relative;
+                         top: 1px;
+                         width: 15px;
+                     }
+                 }
+             }
+            @media only screen and (max-width: 1400px) {
+                padding-right: 50px;
+            }
+         }
+     }
+ }

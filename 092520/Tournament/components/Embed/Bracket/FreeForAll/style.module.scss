@@ -1,0 +1,63 @@
+
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+body{
+    background-image: url(../../../../imgs/ListBg.png);
+    overflow: auto;
+  }
+
+.box {
+    max-width: 1225px;
+    position: relative;
+    .bracketsContainer {
+        background: #062d45;
+        border-radius: 10px;
+        height: 100%;
+        margin-top: 20px;
+    }
+}
+
+.displayflex {
+    display: flex;
+    align-items: center;
+}
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.padding0 {
+    > td {
+        padding-bottom: 0 !important;
+    }
+}
+.marginBottom {
+    margin-bottom: 0 !important;
+}
+
+.displayWidth0 {
+    width: 0;
+}
+
+.marginLeft36 {
+    margin-left: 36px;
+}
+
+
+.logoBar{
+    width: 100vw;
+    min-height: 10vh;
+    border-bottom:1px solid white;
+    padding-top: 1%;
+    .logoWrapper{
+      width: 155px;
+      height: 34px;
+      overflow: hidden;
+   
+  
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }

@@ -1,0 +1,55 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.rankCard {
+  width: 214px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  &.rankNo0 {
+    height: 460px;
+    box-shadow: 0 0px 23px rgba(152, 21, 206, 0.5);
+  }
+  &.rankNo1 {
+    height: 384px;
+    box-shadow: 0 0px 23px rgba(136, 169, 149, 0.5);
+  }
+  &.rankNo2 {
+    height: 350px;
+    box-shadow: 0 0px 23px rgba(21, 69, 206, 0.5);
+  }
+  .rankUserImg {
+    padding-top: 143px;
+    text-align: center;
+    img {
+      width: 132px;
+      height: 132px;
+      border: 5px solid #fff;
+      border-radius: 100%;
+      position: relative;
+      // z-index: 99;
+    }
+  }
+  .userInfo {
+    @include userInfoStyle(22px, 14px, 13px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h5 {
+      color: #fff;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  img {
+    width: 214px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

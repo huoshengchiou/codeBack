@@ -1,0 +1,31 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.container {
+}
+
+.scrollToFix {
+    width: calc( 100% - 80px );
+    position: fixed;
+    z-index: 101;
+    top: -100px;
+    transition: 0.75s;
+    &.show {
+        top: 0;
+    }
+}
+
+:global{
+    .quickview-show{
+        :local(.scrollToFix){
+            @media only screen and (min-width: $bp_mobile + 1) {
+                width: calc(100% - 480px);
+            }
+        }
+    }
+    .in-transition{
+        :local(.context){
+            transition: width linear 0.2s;
+        }
+    }
+}

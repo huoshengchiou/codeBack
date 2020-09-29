@@ -1,0 +1,182 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.btn_disable {
+  background-color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
+}
+.btn_keepregister {
+  background-color: #f3990a;
+}
+.btn_joinedFuc {
+  color: #0073e6;
+  border: 1px solid #0073e6;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn_lineUp {
+  color: #0073e6;
+  border: 1px solid #0073e6;
+  background-color: #fff;
+}
+
+.btn_test {
+  top: 35px;
+  right: 117px;
+}
+.DisCardBtn {
+  width: 158px;
+  height: 40px;
+  position: absolute;
+  top: 109%;
+  left: 30.5%;
+  background: #000000;
+  border-radius: 10px;
+  border: solid 1px #536577;
+  color: #ffffff;
+  // padding-left: 5px;
+  line-height: 36px;
+  text-align: center;
+  &.adjust{
+    width: 103px;
+    height: 33px;
+    left: 13.5%;
+    line-height: 29px;
+
+  }
+  &:hover {
+    background: linear-gradient(to right, rgba(205, 35, 136, .5), rgba(12, 105, 176, .5));
+    // color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+button {
+  &.joinBtn.disable {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  &.joinBtn.register {
+    background-color: #f3990a;
+  }
+  &.joinBtn.joinedDropdown {
+    color: #0073e6;
+    border: 1px solid #0073e6;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &.joinBtn.lineUp {
+    color: #0073e6;
+    border: 1px solid #0073e6;
+    background-color: #fff;
+  }
+}
+
+.bannerBtnStatus {
+  text-align: center;
+  padding: 15px 0px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  &.compeleted {
+    color: #3ead18;
+  }
+}
+
+.BtnDisplayBanner {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 20px;
+  width: max-content;
+  color: rgba(255, 255, 255, 0.5);
+  &.OnGo {
+    color: white;
+  }
+}
+
+.Tournamentcompeleted {
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3ead18;
+}
+
+
+.lineupListWrapper{
+  width: 460px;
+  // background: lightblue;
+  min-height: 630px;
+  padding: 0;
+  // overflow: hidden;
+  .lineupList{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    height: 400px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d2d2d2;
+      border-radius: 2px;
+    }
+  
+    .lineupUnit{
+      width: 100%;
+      //  background: lightcoral;
+       display: flex;
+       padding-top: 15px;
+       padding-bottom: 15px;
+       border-bottom: 1px solid #d5d7d7;
+       &:nth-child(1){
+        border-top: 1px solid #d5d7d7;
+       }
+      .Ava{
+        padding-left: 15px;
+        padding-right: 13px;
+      }
+      .Des{
+        // height: 53px;
+        flex-grow:1;
+        h3{
+          font-size: 14px;
+          font-weight: bold;
+          color: #808080;
+          margin: 0;
+        }
+        p{
+          font-size: 13px;
+          font-weight: normal;
+          margin: 0;
+          color: #808080;
+          margin-top:8px;
+        }
+      }
+      .Status{
+        line-height: 53px;
+        // height: 53px;
+        flex-grow:5;
+        text-align: right;
+        span{
+          font-size: 14px;
+          font-weight: 600;
+          color: #3ead18;
+          
+        }
+      }
+    }
+    
+  }
+  .lineupBtnWrapper{
+    width: 100%;
+    padding: 0 30%;
+  }
+}

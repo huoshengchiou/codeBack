@@ -1,0 +1,218 @@
+@import "src/components/App/mixins";
+@import "src/components/App/theme";
+
+.box {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     min-width: 320px;
+     overflow: auto;
+     
+}
+
+.header {
+     width: 100%;
+     height: 75px;
+     position: absolute;
+     padding: 15px 120px;
+     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner {
+     width: 100%;
+     height: 275px;
+     background-image: url('/static/media/images/careers01_banner_bg.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;                              
+     padding-top: 14vh;
+     @media (max-width: #{$bp_mobile}) {
+     }
+
+     .bannerTitle{
+          width: 68.5%;
+          // height: 100px;
+          margin: 0 auto;
+          // background: teal;
+          h1{
+               font-size: 30px;
+               margin: 0;
+               color: #19dff6;
+          }
+          h3{
+               font-size: 18px;
+               font-weight: 300;
+               color: #ffffff;
+          }
+     }
+     // .bannerImageContainer {
+     //      width: 100%;
+     //      height: 100%;
+     //      overflow: hidden;
+     //      img {
+
+     //      }
+     // }
+}
+
+.innerContainer {
+     width: 100%;
+     //fix讀取時的白畫面
+     min-height: 80vh;
+     background-image: url("../../../media/images/careers_bg.png");
+     //手機版有問題
+     // background-repeat: no-repeat;
+     background-position: center;
+     padding-top: 5vh;
+     padding-bottom: 3vh;
+     min-height: calc(100% - 275px);
+     position: relative;
+     .inner {
+          max-width: 1050px;
+          // height: 100%;
+          margin: 0 auto;
+          color: #FFF;
+          .innerTitle{
+               width: 100%;
+               text-align: center;
+             h1{
+               font-size: 18px;
+               display: inline-block;
+               border-bottom: 5px #ffffff solid;
+               padding-bottom: 10px;
+              }
+          }
+          .careerList{
+               width: 100%;            
+               .careerUnit{
+                    margin: 2vh auto 0;
+                    width: 90%;
+                    // height: 80px;
+                    // opacity: 0.3;
+                    border-radius: 10px;
+                    // box-shadow: 0.7px 1.9px 18px 0 #cac8c8;
+                    background-color:rgba(11,65,96,0.3);
+                    text-align: left;
+                    // h3{
+                    //      margin-left: 20px;
+                    //      display: inline-block;
+                    //      line-height: 40px;
+                    //      font-size: 18px;
+                    //      color: #ffffff;
+                    // }
+                    // span{
+                    //      margin:auto 100px;
+                    //      display: inline-block;
+                    //      font-size: 14px;
+                    // }
+                    @media (max-width: #{$bp_mobile}) {
+                         margin-left: auto;
+                         margin-right: auto;
+                         width: 90%;
+                    }
+                    ul{
+                         width: 100%;
+                         // height: 100%;
+                         padding: 0;
+                         list-style: none;
+                         display: flex;
+                         overflow: hidden;
+                         @media (max-width: #{$bp_mobile}) {
+                                   display: block;                         
+                              }
+                         .careerTitle{
+                              width: 70%;
+                              @media (max-width: #{$bp_mobile}) {
+                                   width: 95%;                        
+                              }
+
+                         // background: teal;
+                         a{
+                              text-decoration: none;
+                              color: white;
+                              // &:hover{
+                              //      text-decoration: underline;
+                              // }
+                         }
+                         h3{
+                              margin-left: 2vw;
+                              font-size: 18px;
+                              white-space: nowrap;
+                              // line-height: 45px;
+                              line-height: 5vh;
+                              @media (max-width: #{$bp_mobile}) {
+                                   // font-size: 16px;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              white-space: nowrap;
+                              }
+                              &::after{
+                                   width: 0%;
+                                   height: 2px;
+                                   content: '';
+                                   display: block;
+                                   background: white;
+                                   opacity: 0;
+                                   transition: .75s;
+                              }
+                              &:hover{
+                                   &::after{
+                                        opacity: 1;
+                                        width: 90%;
+                                        // height: 2px;
+                                        // content: '';
+                                        // display: block;
+                                        // background: white;
+                                        // transition: .75s;
+                                   }
+                              }
+                             
+                         }
+                        }
+                        .careerLocation{
+                             margin-left: 5vw;
+                             width: 15%;
+                         //     background: lightblue;
+                             p{
+                              // line-height: 50px;
+                              line-height: 5.5vh;
+                              // margin-left: 12vw;
+                              font-size: 14px;
+                              padding-right: 1vw;
+                              overflow: hidden;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 1;
+                              -webkit-box-orient: vertical;
+                              -moz-line-clamp: 1;
+                              -moz-box-orient: vertical;
+                              @media (max-width: #{$bp_mobile}) {
+                                   // margin-left: 3.5vw;
+                                   width: 95%;
+                              }   
+                         }
+                        }
+                         
+                              
+                             
+                         
+                    }
+                    &:hover{
+                         border-radius: 10px;
+                         box-shadow: 0.7px 1.9px 18px 0 #cac8c8;
+                         background-color: rgba(11,65,96,0.7);
+                    }
+                    
+                    
+               
+               }
+          }
+     }
+     
+}
+
+.inView {
+     position: absolute;
+     bottom: 0;
+     height: 10px;
+}
+

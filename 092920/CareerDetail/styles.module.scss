@@ -1,0 +1,293 @@
+@import "src/components/App/mixins";
+@import "src/components/App/theme";
+
+$blockColor:rgba(11,65,96,0.3);
+@mixin blockBase {
+     width: 90%;
+     background: $blockColor;
+     border-radius: 10px;
+     margin: 0 auto;
+     padding: 0.8vh 5vh;
+}
+
+.box {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     min-width: 320px;
+     overflow: auto;
+     
+}
+
+.header {
+     width: 100%;
+     height: 75px;
+     position: absolute;
+     top: 0;
+     padding: 15px 120px;
+     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner {
+     width: 100%;
+     height: 75px;
+     background-image: url('/static/media/images/careers02_banner_bg.png');
+     // style={{
+     //      backgroundImage: "url(/static/media/images/careers01_banner_bg.png)"
+     // }}
+     background-size: cover;
+     background-position: center;                              
+     // padding-top: 14vh;
+     @media (max-width: #{$bp_mobile}) {
+     }
+
+     .bannerTitle{
+          width: 68.5%;
+          // height: 100px;
+          margin: 0 auto;
+          // background: teal;
+          h1{
+               font-size: 30px;
+               margin: 0;
+               color: #19dff6;
+          }
+          h3{
+               font-size: 18px;
+               font-weight: 300;
+               color: #ffffff;
+          }
+     }
+     // .bannerImageContainer {
+     //      width: 100%;
+     //      height: 100%;
+     //      overflow: hidden;
+     //      img {
+
+     //      }
+     // }
+}
+
+.innerContainer {
+     width: 100%;
+     //TODO 調整height
+     min-height: 92vh;
+     background-image: url("../../../media/images/careers_bg.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     padding-top: 5vh;
+     padding-bottom: 3vh;
+     .inner {
+          max-width: 1050px;
+          height: 100%;
+          margin: 0 auto;
+          color: #FFF;
+          .innerHead{
+               // height: 100px;
+               width: 90%;
+               overflow: hidden;
+               display: flex;
+               justify-content: space-between;
+               // @include blockBase;
+               margin: 0 auto;
+               // padding-left: 6vh;
+               @media (max-width: #{$bp_mobile}) {
+                    flex-direction: column;               
+               }
+               .jobTitle{
+               width: 72%;
+               height: 100%;
+               // background: teal;
+               @media (max-width: #{$bp_mobile}) {
+                    width: 100%;
+               }
+                   h1{         
+                    line-height: 86px;      
+                    font-size: 18px;
+                    @media (max-width: #{$bp_mobile}) {
+                         line-height: 30px;      
+                    }
+                   }
+               }
+               .share{
+               width: 25%;
+               height: 100%;
+               // background: teal;
+               padding-top: 15px;
+                     @media (max-width: #{$bp_mobile}) {
+                      padding: 0;    
+                     }
+               ul{
+                    list-style: none;
+                    display: flex;
+                    padding: 0;
+                    // padding-left: 30px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    @media (max-width: #{$bp_mobile}) {
+                         justify-content: flex-start;
+                    }
+                                     
+                    li{
+                         h3{
+                              font-size: 14px;
+                         @media (max-width: #{$bp_mobile}) {
+                              width: 80px;             
+                         }
+                         }
+                         .fbIcon{
+                              width: 35px;
+                              height: 35px;
+                              margin: 0 5px;
+                              cursor: pointer;
+                              img{
+                                   width: 100%;
+                                   height: 100%;
+                                   object-fit: cover;
+                              }
+                             
+                         }
+                         .igIcon{
+                              width: 35px;
+                              height: 35px;
+                              margin: 0 5px;
+                              background: #ffffff;
+                              cursor: pointer;
+                              img{
+                                   width: 100%;
+                                   height: 100%;
+                                   object-fit: cover;
+                              }
+                         }
+                         .linkIcon{
+                              width: 35px;
+                              height: 35px;
+                              margin: 0 5px;
+                              cursor: pointer;
+                              text-align: center;
+                              position: relative;
+                              img{
+                                   width: 100%;
+                                   height: 100%;
+                                   object-fit: cover;
+                              }
+                              // svg{
+                              //      width: 100%;
+                              //      height: 100%;
+                              //      font-size: 30px;
+                              //      background: lightgray;
+                              //      stroke: rgb(255, 255, 224);
+                              // } 
+                              .ref{
+                                   position: absolute;
+                                   font-size: 0px;
+                                   z-index: -1;
+                              }
+                         }
+
+                    }
+               }
+               }
+          }
+          .location{
+               // height: 110px;
+               // padding-top: 0.8vh;
+               // padding-left: 5vh;
+               @include blockBase;
+               // margin-top: 2vh;
+               h3{
+                    // line-height: 40px;
+                    color: #6d97c0;
+                    font-size: 14px;
+               }
+               p{
+                    display: inline-block;
+                    vertical-align: middle;
+                    @media (max-width: #{$bp_mobile}) {
+                         width: 35vh; 
+                         margin-top: 0;            
+                    }
+
+               }
+               span{
+                    width: 17px;
+                    height: 25px;
+                    // background: teal;
+                    // margin-top: 10px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+
+                    
+               }
+            
+          }
+          .jobdes{
+               // height: 200px;
+               // padding: 0.8vh 5vh;
+               @include blockBase;
+               margin-top: 2vh;
+               h3{
+                    color: #6d97c0;
+                    font-size: 14px;
+
+               }
+               // p{
+               //      line-height: 24px;
+               //      text-align: justify;
+               //      text-justify:inter-ideograph;
+               //      @media (max-width: #{$bp_mobile}) {
+               //           text-align: left;
+
+               //      }
+                div{
+                    line-height: 24px;
+                    text-align: justify;
+                    text-justify:inter-ideograph;
+                    padding-bottom: 2vh;
+                    @media (max-width: #{$bp_mobile}) {
+                         text-align: left;
+
+                    }
+               }     
+          }
+          .qul{
+               // height: 400px;
+               // padding: 0.8vh 5vh;
+               @include blockBase;
+               margin-top: 2vh;
+               h3{
+                    color: #6d97c0;
+                    font-size: 14px;
+
+               }
+               // ul{
+               //      padding-left: 2vh;
+               //      width: 100%;
+               //      li{
+               //           margin-top: 10px;                         
+               //           line-height: 24px;
+               //           text-align: justify;
+               //           text-justify:inter-ideograph;
+               //           @media (max-width: #{$bp_mobile}) {
+               //                text-align: left;
+
+               //           }
+               //      }
+               // }
+               div{
+                    width: 100%;
+                    line-height: 24px;
+                    padding-bottom: 2vh;
+               }
+          }
+        
+     }
+     .footer{
+          width: 90%;
+          margin-left: 40%;
+          button{
+                 margin: 20px auto 10px;
+          }
+       }
+}
+

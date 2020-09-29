@@ -1,0 +1,30 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+
+.sponsor {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  h3 {
+    @include titleSpace(0, 7px);
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+.sponsorSlide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > a:not(:last-child) {
+    margin-right: 11px;
+  }
+
+  img {
+    // width: 298px;
+    height: 154px;
+    object-fit: contain;
+  }
+}
