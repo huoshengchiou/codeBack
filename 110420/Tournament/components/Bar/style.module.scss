@@ -1,0 +1,52 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.box {
+     background-color: #051d35;
+     height: 70px;
+     width: 100%;
+     @include flexBlock(center, center);
+}
+
+.context {
+     width: 1129px;
+     height: 70px;
+     .rightContainer {
+          @include flexBlock(center, center);
+     }
+     &.floatBar {
+          @include flexBlock(center, flex-end);
+     }
+     &.topBar {
+          @include flexBlock(center, space-between);
+     }
+     p.hurryBtn {
+          @include titleSpace(0, 0);
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 2.57;
+          letter-spacing: -0.07px;
+          color: #e59229;
+     }
+     button {
+          margin: 0 0 0 15px;
+          &.joinBtn {
+               min-width: 120px;
+          }
+     }
+     a {
+          @include titleSpace(0, 0);
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 2.57;
+          letter-spacing: -0.07px;
+          text-decoration: none;
+          color: #0073e6;
+          transition: 0.3s all;
+          &:hover {
+               color: #fff;
+               transition: 0.3s all;
+          }
+     }
+}
+

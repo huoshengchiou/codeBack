@@ -1,0 +1,56 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.titlebar {
+    @include flexBlock(flex-start, space-between);
+}
+
+.name {
+    @include flexBlock(center, flex-start);
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+    text-align: left;
+    color: #fff;
+    span {
+        font-size: 14px;
+        font-weight: 300;
+        color: #fff;
+        background-color: #e59229;
+        padding: 3px 13px;
+        margin-left: 16px;
+    }
+    img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.colorBox {
+    margin-top: 30px;
+    @include flexBlock(center, space-between);
+    background-color: rgba(11, 65, 96, 0.3);
+    border-radius: 10px;
+    padding: 20px 30px;
+    flex: 0 0 auto;
+    div {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 600;
+        span {
+            color: #6d97c0;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        &:first-child {
+            // flex: 0 0 80px;
+            margin-right: 40px;
+            // min-width: 80px;
+        }
+        &:last-child {
+            flex: 0 0 auto;
+        }
+    }
+}

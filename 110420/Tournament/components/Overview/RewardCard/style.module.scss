@@ -1,0 +1,78 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+
+$dusty-orange: #e59229;
+
+.rewardCard {
+    // background-color: rgba(11, 65, 96, 0.3);
+    // border-radius: 10px;
+    // overflow: hidden;
+    position: relative;
+    // margin: 0 5px;
+}
+
+.rewardStatus {
+    position: absolute;
+    top: 17px;
+    left: 0px;
+    height: 31px;
+    color: $white;
+    padding: 6px 17px;
+    background-color: $dusty-orange;
+    max-width: 90px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -21px;
+        width: 0;
+        height: 0;
+        border-top: 31px solid $dusty-orange;
+        border-right: 21px solid transparent;
+    }
+
+    div {
+        font-size: 14px;
+        font-weight: 600;
+        vertical-align: super;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+.rewardContent {
+    padding: 20px 12px 18px 12px;
+    // max-width: 274px;
+    word-break: break-all;
+    h4 {
+        @include titleSpace(0, 9px);
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.08px;
+        color: $white;
+    }
+    p {
+        @include titleSpace(0, 0);
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        letter-spacing: -0.07px;
+        color: $white;
+    }
+}
+.ImgWrapper {
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    overflow: hidden;
+    & > img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.cardWrapper {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}

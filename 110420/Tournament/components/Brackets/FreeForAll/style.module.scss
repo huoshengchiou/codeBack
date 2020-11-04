@@ -1,0 +1,156 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.box {
+  width: 100%;
+  // max-width: 1225px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin-top: 20px;
+
+  .bracketsContainer {
+    background-color: transparent;
+    margin-top: 20px;
+  }
+  h2 {
+    @include titleSpace(8px, 4px);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    letter-spacing: -0.09px;
+    color: #fff;
+  }
+}
+
+.customWindowContentClass {
+  > div {
+    margin: 0;
+  }
+}
+
+.blockMsg{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.tabContainer {
+  @include flexBlock(center, space-between);
+  margin-bottom: 16px;
+  .leftCol {
+    width: 17%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #fff;
+    margin-top: 14px;
+    padding-bottom: 3px;
+    border-bottom: solid 1.5px #828990
+  }
+  .rightCol {
+    width: 83%;
+    > div  {
+      display: block;
+      > div {
+        margin-left: -5px;
+        li {
+          padding: 5px 35px;
+        }
+      }
+    }
+  }
+}
+
+.groupContainer {
+  // width: 1225px;
+  margin-left: -5px;
+  margin-right: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  .row {
+    width: 50%;
+    margin-bottom: 16px;
+    .gap {
+      padding-left: 5px;
+      padding-right: 5px;
+      .groupCard {
+        background-color: rgba(11, 65, 96, 0.3);
+        border-radius: 10px;
+        padding: 16px 16px 4px 16px;
+        h4 {
+          @include titleSpace(0px, 12px);
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 600;
+          letter-spacing: -0.07px;
+          color: #fff;
+        }
+        .groupTable {
+          .ico {
+            @include flexBlock(center, center);
+            margin-top: 10px;
+            width: 50px;
+            height: 50px;
+          }
+          > div {
+            > div:nth-child(1) {
+              border-top: 1px solid rgba(255, 255, 255, 0.3);
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+              > div {
+                padding: 0 10px;
+                &:first-child {
+                  padding: 0;
+                }
+              }
+            }
+            > div:nth-child(2) > div {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+              cursor: pointer;
+              &:last-child {
+                border-bottom: none;
+              }
+              > div {
+                transition: 0.3s ease;
+                padding: 0 10px;
+                &:first-child {
+                  padding: 0;
+                }
+                &:nth-child(5) {
+                  opacity: 0;
+                }
+              }
+              &:hover {
+                > div {
+                  background-color: rgba(0, 0, 0, 0.2);
+                  &:nth-child(5) {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+          .clubImg {
+            @include flexBlock(center, flex-start);
+            > div {
+              min-width: 50px;
+              line-height: normal;
+            }
+            span {
+              width: 164px;
+              overflow : hidden;
+              text-overflow : ellipsis;
+              white-space : nowrap;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(nb) {
+  .groupContainer {
+    width: 1107px;
+  }
+}

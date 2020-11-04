@@ -1,0 +1,126 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+.cardBody {
+    padding: 15px 0 15px 15px;
+}
+.cardWrapper {
+    margin-bottom: 15px;
+}
+.settings {
+    .setInner {
+        .setTable {
+            tr {
+                td {
+                    padding-right: 34px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    select {
+                        @include inputStyle(223px);
+                    }
+                    .seInnertTitle {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .line {
+            height: 1px;
+            background-color: $white;
+            opacity: 0.3;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .needTop {
+            margin-top: 20px;
+        }
+        .add {
+            text-decoration: none;
+            font-size: 13px;
+            color: #0073e6;
+            display: inline-block;
+            padding-top: 20px;
+        }
+        .innerBlock {
+            display: flex;
+            align-items: center;
+        }
+        .innerSelect {
+            width: 223px;
+            margin-right: 10px;
+        }
+        .bold {
+            font-size: 14px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            .exclamation {
+                display: inline-block;
+                position: relative;
+                left: 5px;
+                top: 2px;
+            }
+        }
+        .group {
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin-right: 15px;
+                    font-size: 13px;
+                    font-weight: 300;
+                    display: inline-block;
+                    input[type='radio'] + label {
+                        color: $white;
+                    }
+                }
+            }
+            .requestInner {
+                input {
+                    @include inputStyle(223px);
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+            .inner {
+                font-size: 14px;
+                font-weight: 300;
+                color: $white;
+                > div {
+                    margin: 0;
+                }
+
+                .innerInput {
+                    input {
+                        @include inputStyle(223px);
+                        margin-right: 10px;
+                    }
+                }
+                .longInput {
+                    width: 664px;
+                }
+                .blue {
+                    font-weight: 600;
+                    color: #00fffc;
+                }
+
+                .spanUp {
+                    display: inline-block;
+                    padding-top: 5px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.boSelect {
+    width: 223px;
+}
+.buttonCon {
+    text-align: center;
+    padding-bottom: 30px;
+    button {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

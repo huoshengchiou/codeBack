@@ -1,0 +1,247 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.preMatch {
+  width: 100%;
+  max-width: 916px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  .prePageContainer {
+    // background-color: $blueBg;
+    margin-top: 10px;
+    background: #062d45;
+    border-radius: 10px;
+    padding-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+    .session {
+      background-image: url("./imgs/bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 45px;
+      .gameIcon {
+        @include flexBlock(center, center);
+        > img {
+          width: 26px;
+          height: 26px;
+          margin-right: 10px;
+        }
+      }
+      h3.tournamentName {
+        @include titleSpace(0, 0);
+        color: $white;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        // &:before {
+
+        // }
+      }
+      p {
+        @include titleSpace(0, 0);
+        color: $white;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+    .ScrimID {
+      position: absolute;
+      top: 56px;
+      right: 20px;
+      p {
+        @include titleSpace(0, 0);
+        color: $white;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 300;
+        text-align: right;
+      }
+    }
+    .ungoBlock {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      .leftCol {
+        text-align: left;
+      }
+      .rightCol {
+        text-align: right;
+        justify-content: flex-end;
+        .teamUserImg {
+          justify-content: flex-end;
+        }
+      }
+      .teamName {
+        display: flex;
+        align-items: center;
+        margin-top: 73px;
+        position: relative;
+        // .clubImg {
+        //   // @include linearBox(98px, 100px);
+        // }
+        h2.victory {
+          @include titleSpace(0, 0);
+          // position: absolute;
+          font-size: 30px;
+          font-weight: 600;
+          color: #3ead18;
+          // top: 2px;
+          // left: 101px;
+        }
+        p {
+          @include titleSpace(0, 0);
+          color: $white;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.08px;
+          margin-left: 6px;
+          margin-right: 6px;
+          width: 162px;
+          height: auto;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .matchImg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 108px;
+          height: 108px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border: solid 5px rgba(255, 255, 255, 0.5);
+          border-radius: 100px;
+          img {
+            width: 33px;
+            height: 53px;
+          }
+        }
+      }
+      .teamUserImg {
+        margin-top: 20px;
+        margin-bottom: 27px;
+        display: flex;
+        align-items: center;
+        // img {
+        //   // width: 38px;
+        //   // border: 2px solid #126174;
+        //   // border-radius: 38px;
+        //   margin-left: 5px;
+        //   margin-right: 5px;
+        //   // &:nth-child(1) {
+        //   //   margin-left: 0px;
+        //   // }
+        // }
+        p {
+          margin-left: 5px;
+          display: inline-block;
+          color: white;
+        }
+      }
+      .vsCol {
+        margin-top: 32px;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4 {
+          @include titleSpace(0, 11px);
+          color: #e59229;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .green {
+          color: #3ead18;
+        }
+        .red {
+          color: #cd2524;
+        }
+        p {
+          @include titleSpace(0, 11px);
+          color: $white;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        > div {
+          img {
+            width: 50px;
+            height: 109px;
+          }
+        }
+        .score {
+          text-align: center;
+          // margin-top: 24px;
+          p {
+            @include titleSpace(0, 0px);
+            display: inline-block;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.18px;
+            color: #ffffff;
+            &:nth-child(2) {
+              margin-left: 12px;
+              margin-right: 12px;
+            }
+          }
+          > div {
+            button {
+              min-width: 210px;
+              height: 31px;
+              margin-top: 17px;
+              display: flex;
+              justify-content: center;
+              &.submitBtn {
+                color: $white;
+                background: rgba(255, 255, 255, 0.5) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .matchBtn {
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > button {
+          min-width: 219px;
+          margin-left: 11px;
+          margin-right: 11px;
+          // margin-top: 27px;
+        }
+      }
+      .checkBtn {
+        color: $white;
+        background: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+    .toolsBtn {
+      position: absolute;
+      right: 23px;
+      bottom: 25px;
+      .share {
+        img {
+          width: 23px;
+          height: 22px;
+        }
+      }
+      .trash {
+        img {
+          width: 14px;
+          height: 18px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

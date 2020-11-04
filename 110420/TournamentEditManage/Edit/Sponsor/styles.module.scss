@@ -1,0 +1,107 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+.cardBody {
+    padding: 15px 0 15px 15px;
+}
+.cardWrapper {
+    margin-bottom: 15px;
+}
+.sponsorCon {
+    .infoInner {
+        .sponsorBlock {
+            width: $full;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+            .picBox {
+                width: 228px;
+                height: 118px;
+                cursor: pointer;
+                position: relative;
+                opacity: 0.7;
+                background-color: rgba(0, 0, 0, 0.8);
+                &:hover {
+                    opacity: 1;
+                }
+                > img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .mask {
+                    width: $full;
+                    height: $full;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    background-color: rgba(0, 0, 0, 0.15);
+                    // border: solid 2px rgba(255, 255, 255, 0.1);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    .size {
+                        text-align: center;
+                        color: #6d97c0;
+                        font-weight: 600;
+                        font-size: 14px;
+                        width: 100%;
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .hasImg {
+                position: relative;
+                &:hover {
+                    .mask {
+                        opacity: 1;
+                    }
+                }
+                .gameBanner {
+                    width: $full;
+                    display: block;
+                }
+                .mask {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    transition: 0.5s opacity;
+                }
+            }
+            .linkInput {
+                position: relative;
+                margin-right: 10px;
+                margin-left: 10px;
+                width: calc(100% - 20px - 300px);
+                .linkImg {
+                    position: absolute;
+                    left: 12px;
+                    top: 9px;
+                }
+                input {
+                    padding-left: 43px;
+                }
+            }
+        }
+        .add {
+            font-size: 13px;
+            font-weight: 300;
+            color: #0073e6;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+    }
+}
+.buttonCon {
+    text-align: center;
+    padding-bottom: 30px;
+    button {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

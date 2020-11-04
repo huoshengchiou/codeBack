@@ -1,0 +1,23 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.editimage {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #0073e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        width: 17px;
+        height: 17px;
+        vertical-align: top;
+        path {
+            fill: #fff;
+        }
+    }
+    &:hover {
+        background: #0060bf;
+    }
+}

@@ -1,0 +1,23 @@
+@import 'src/components/App/mixins';
+
+.tagList {
+        margin-left: -5px;
+        margin-right: -5px;
+        min-width: 400px;
+        min-height: 100px;
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;        
+            li{
+                margin: 0 5px 10px 5px;
+            }
+        }
+        // > button {
+        //     margin-left: 5px;
+        //     margin-right: 5px;
+        //     margin-bottom: 10px;
+        // }
+}
+

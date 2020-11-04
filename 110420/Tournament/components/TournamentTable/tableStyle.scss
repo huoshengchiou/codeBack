@@ -1,0 +1,105 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.ant-table {
+    background: rgba(255, 255, 255, 0);
+}
+
+// ScrollBar
+.ant-spin-container div {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
+// th style
+.ant-table-thead > tr > th {
+    padding: 22px 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.07px;
+    background: #203748;
+    background-color: #203748;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:first-child {
+        //padding: 22px 5px 22px 25px;
+        padding: 0;
+    }
+}
+
+// td style
+.ant-table-tbody > tr > td {
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.07px;
+    background: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:first-child {
+        //padding: 22px 5px 22px 25px;
+        padding: 0;
+    }
+
+    > img {
+        padding-top: 5px;
+        vertical-align: baseline;
+    }
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+    background: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+// fixed style
+.ant-table-tbody > tr > td.ant-table-cell.ant-table-cell-fix-left,
+.ant-table-tbody > tr > td.ant-table-cell.ant-table-cell-fix-right {
+    background: #072033;
+    background-color: #072033;
+}
+
+// fixed line style
+.ant-table-cell-fix-left-last::after {
+    content: "";
+    display: inline-block;
+    background-image: url("./imgs/line.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    right: 6px;
+    top: 0;
+    width: 6px;
+}
+
+// .ant-table-cell-fix-right-first::after {
+//   border-right: 3px double rgba(255, 255, 255, 0.3);
+//   left: 3px;
+// }
+
+.ant-table-fixed {
+    table-layout: fixed;
+}
+
+.ant-table-cell-fix-left {
+    left: initial !important;
+}

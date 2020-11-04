@@ -1,0 +1,48 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+
+.rankTable {
+    width: 100%;
+    table {
+        @include tableStyle(35px, 14px, 14px, 10%, 70%, 20%);
+        tbody {
+            tr {
+                td {
+                    &.userName {
+                        > div {
+                            display: flex;
+                            align-items: center;
+                            > img {
+                                width: 46px;
+                                height: 46px;
+                                border: 2px solid #126174;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                    .userInfo {
+                        @include userInfoStyle(0, 14px, 13px);
+                        padding-left: 10px;
+                        h5 {
+                            color: #fff;
+                        }
+                        p {
+                            color: rgba(255, 255, 255, 0.7);
+                        }
+                    }
+                    p.rankNumber {
+                        span {
+                            font-size: 20px;
+                            font-weight: 700;
+                            padding-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mt0 {
+    margin-top: 0;
+}

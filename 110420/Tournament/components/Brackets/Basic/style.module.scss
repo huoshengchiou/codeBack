@@ -1,0 +1,30 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.box {
+  width: 100%;
+  // max-width: 1225px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin-top: 20px;
+
+  .bracketsContainer {
+    background-color: transparent;
+    margin-top: 20px;
+  }
+}
+
+.customWindowContentClass {
+  > div {
+    margin: 0;
+  }
+}
+
+
+.blockMsg{
+  width: 20%;
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+}

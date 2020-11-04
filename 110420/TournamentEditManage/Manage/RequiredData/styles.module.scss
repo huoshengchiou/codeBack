@@ -1,0 +1,135 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+
+.requireContainer {
+  .toolTop {
+    text-align: right;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .regContent {
+    margin-top: 20px;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    .reg {
+      @include flexBlock(center, flex-start);
+      padding-left: 30px;
+      margin-bottom: 20px;
+      > p {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.07px;
+        span {
+          font-size: 30px;
+        }
+      }
+      .userBlock {
+        @include flexBlock(center, flex-start);
+        margin-left: 32px;
+        span {
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: 600;
+          letter-spacing: -0.1px;
+        }
+      }
+    }
+  } 
+  table.regTable {
+    width: 100%;
+    th {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.07px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      // border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    td {
+      font-size: 14px;
+      font-weight: 300;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      &.col1 {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.07px;
+      }
+      &.col2 {
+        .tdUserBlock {
+          @include flexBlock(center, flex-start);
+          span {
+            width: 200px;
+            overflow : hidden;
+            text-overflow : ellipsis;
+            white-space : nowrap;
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.07px;
+          }
+        }
+      }
+      &.col3 {
+        .tdData {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          .qTitle{
+            font-size: 14px;
+            font-weight: 600;
+            color: #6d97c0;
+            margin-top: 15px;
+          }
+          .qAns{
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 15px;
+          }
+          p {
+            @include titleSpace (0,0);
+            font-size: 14px;
+            font-weight: 300;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            span {
+              color: #6d97c0;
+              font-weight: 600;
+            }
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    th, td {
+      &.col1 {
+        width: 5%;
+        padding: 20px 10px 20px 30px;
+        text-align: center;
+      }
+      &.col2 {
+        padding: 20px 10px 20px 30px;
+        width: 42%;
+      }
+      &.col3 {
+        padding: 0px 10px 0px 0px;
+        width: 53%;
+      }
+    }
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.requireCardBody{
+  min-height: 28vh;
+}

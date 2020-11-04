@@ -1,0 +1,656 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+.cardBody {
+    padding: 15px 15px 15px 15px;
+}
+
+.cardWrapper {
+    margin-bottom: 15px;
+}
+
+.basicsCon {
+    .basicsInner {
+        .needTop {
+            margin-top: 20px;
+        }
+        .line {
+            height: 1px;
+            background-color: $white;
+            opacity: 0.3;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .basicsPic {
+            cursor: pointer;
+            position: relative;
+            opacity: 0.7;
+            /*
+            T8t banner	顯示: W1129*H350
+                        上傳後預覽: W812*H252"
+            */
+            width: 812px;
+            height: 252px;
+            &:hover {
+                opacity: 1;
+            }
+            // > img {
+            //     width: 100%;
+            //     // height: 100%;
+            //     height: 252px;
+            //     object-fit: contain;
+            // }
+            .bigBanner {
+                width: $full;
+                height: $full;
+                display: block;
+            }
+            .mask {
+                width: $full;
+                height: $full;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                top: 0;
+                img {
+                    width: 16px;
+                }
+                .size {
+                    padding-top: 20px;
+                    width: $full;
+                    color: #6d97c0;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+        }
+        .basicsTable {
+            margin-top: 20px;
+            tr {
+                td {
+                    vertical-align: top;
+                    &:first-child {
+                        width: 223px;
+                    }
+                    select {
+                        @include inputStyle(223px);
+                    }
+                    .basicsTableWord {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .basicsGrayWord {
+                        color: $white;
+                        opacity: 0.5;
+                        font-size: 13px;
+                        font-weight: 300;
+                        padding-top: 10px;
+                    }
+                    .basicsTableTimeSelect {
+                        select {
+                            @include inputStyle(73px);
+                            &:first-child {
+                                margin-right: 10px;
+                            }
+                            &:last-child {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .groupAll {
+            display: flex;
+            .groupTitle {
+                width: 50%;
+            }
+        }
+        .group {
+            .bold {
+                font-size: 14px;
+                font-weight: 600;
+                padding-bottom: 10px;
+                .exclamation {
+                    display: inline-block;
+                    position: relative;
+                    left: 5px;
+                    top: 2px;
+                }
+            }
+            .inputCon {
+                position: relative;
+                display: flex;
+                align-items: center;
+                .copyInput {
+                    @include inputStyle(calc(100% - 42px));
+                }
+                .embed {
+                    height: 80px;
+                    resize: none;
+                }
+                .copy {
+                    position: absolute;
+                    right: 55px;
+                    top: 12px;
+                    cursor: pointer;
+                    &.embed {
+                        right: 15px;
+                    }
+                }
+                .redo {
+                    cursor: pointer;
+                    margin-left: 20px;
+                }
+            }
+            .manTableNoBlckBg {
+                border-spacing: 0;
+                width: $full;
+                tr {
+                    &:first-child {
+                        td {
+                            background-color: rgba(255, 255, 255, 0.1);
+                            font-weight: 600;
+                        }
+                    }
+                    td {
+                        height: 60px;
+                        box-sizing: border-box;
+                        color: $white;
+                        font-size: 14px;
+                        font-weight: 300;
+                        padding-left: 50px;
+                        vertical-align: middle;
+                        border-top: 1px solid rgba(255, 255, 255, 0.3);
+                        padding-left: 35px;
+                        &:first-child,
+                        &:nth-child(2) {
+                            width: 108px;
+                            text-align: center;
+                            padding: 0;
+                        }
+                        &:nth-child(4) {
+                            padding-left: 0;
+                            width: 138px;
+                            text-align: center;
+                        }
+                        &:nth-child(5) {
+                            padding-left: 0;
+                            width: 138px;
+                            text-align: center;
+                        }
+                        .trash {
+                            width: 14px;
+                        }
+                        .flex {
+                            height: $full;
+                            width: $full;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-right: 10px;
+                            .manBox {
+                                padding: 10px 0;
+                                margin-right: 10px;
+                            }
+                        }
+                        span {
+                            font-size: 20px;
+                        }
+                        .inputBlock {
+                            display: flex;
+                            align-items: center;
+                            .input {
+                                width: 20%;
+                            }
+                            .message {
+                                margin-left: 5px;
+                                color: #cd2524;
+                            }
+                        }
+                    }
+                    .compTd_1 {
+                        text-align: left !important;
+                    }
+                    .compTd_2 {
+                        width: 180px;
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+            }
+            .manTableNoBlckBg2 {
+                tr {
+                    td {
+                        &:nth-child(2) {
+                            width: 375px;
+                        }
+                        .enter {
+                            @include inputStyle(100px);
+                        }
+                        .smallRed {
+                            color: #ff0100;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+            .needBottom {
+                margin-bottom: 20px;
+            }
+            .blackBg {
+                margin-top: 15px;
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 20px 30px;
+                border-radius: 10px;
+                width: $full;
+                box-sizing: border-box;
+                .tt {
+                    color: $white;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                .time {
+                    color: $white;
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-top: 5px;
+                    opacity: 0.5;
+                    line-height: 22px;
+                }
+                .txt {
+                    color: $white;
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-top: 8px;
+                    line-height: 22px;
+                    a {
+                        color: #0073e6;
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                > button {
+                    margin: 0;
+                    float: left;
+                    padding: 0 20px;
+                    line-height: 30px;
+                    height: 32px;
+                    font-size: 14px;
+                    min-width: 100px;
+                }
+                .moreBtn {
+                    display: flex;
+                    justify-content: flex-end;
+                    .submenu {
+                        margin: 0 0 0 10px;
+                        .subbtn {
+                            margin: 0;
+                            padding: 0 20px;
+                            line-height: 30px;
+                            height: 32px;
+                            font-size: 14px;
+                            min-width: 100px;
+                        }
+                        > div > div {
+                            top: 35px;
+                        }
+                    }
+                    .button {
+                        margin: 0 0 0 10px;
+                        display: inline-block;
+                    }
+                    .smallBtn {
+                        padding: 0 20px;
+                        line-height: 30px;
+                        height: 32px;
+                        font-size: 14px;
+                        min-width: 100px;
+                    }
+                }
+                .top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 50px;
+                    position: relative;
+                    .num {
+                        width: $white;
+                        font-size: 14px;
+                        font-weight: 600;
+                        span {
+                            font-size: 30px;
+                        }
+                    }
+                    .earth {
+                        @include linearBox(78px, 50%);
+                        margin-left: 30px;
+                        margin-right: 12px;
+                    }
+                    .name {
+                        font-size: 20px;
+                        color: $white;
+                        font-weight: 600;
+                    }
+                    .selected {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        right: 122px;
+                        top: 28px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        & > div {
+                            margin-right: 5px;
+                        }
+                    }
+                    .trash {
+                        position: absolute;
+                        right: 0;
+                        top: 30px;
+                    }
+                }
+                .manTable {
+                    width: $full;
+                    border-spacing: 0;
+                    margin-top: 15px;
+                    tr {
+                        &:first-child {
+                            td {
+                                background-color: rgba(255, 255, 255, 0.1);
+                                font-weight: 600;
+                                height: 55px;
+                            }
+                        }
+                        td {
+                            height: 70px;
+                            box-sizing: border-box;
+                            color: $white;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding-left: 50px;
+                            vertical-align: middle;
+                            border-top: 1px solid rgba(255, 255, 255, 0.3);
+                            &:first-child {
+                                width: 380px;
+                            }
+                            &:nth-child(2) {
+                                width: 205px;
+                            }
+                            .flex {
+                                height: $full;
+                                width: $full;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                .manBox {
+                                    padding: 10px 0;
+                                    margin-right: 10px;
+                                }
+                            }
+                            span {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .inputSearch {
+                float: left;
+                position: relative;
+                width: 350px;
+                img {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                    top: 7px;
+                }
+            }
+            .fileBtn {
+                float: right;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                .img {
+                    margin-top: 8px;
+                }
+                button {
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-top: 0;
+                    padding: 0 20px;
+                    line-height: 30px;
+                    height: 32px;
+                    font-size: 14px;
+                    min-width: 100px;
+                }
+            }
+            .clear {
+                clear: both;
+                width: $full;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin-right: 15px;
+                    font-size: 13px;
+                    font-weight: 300;
+                    display: inline-block;
+                    input[type='radio'] + label {
+                        color: $white;
+                    }
+                }
+            }
+            .horizontalUl {
+                li {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: $full;
+                    line-height: 22px;
+                    input {
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .opaTable {
+                width: $full;
+                border-spacing: 0;
+                margin-top: 15px;
+                tr {
+                    &:first-child {
+                        td {
+                            font-weight: 600;
+                            background-color: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    td {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                        font-size: 14px;
+                        font-weight: 300;
+                        box-sizing: border-box;
+                        padding: 0 30px;
+                        height: 57px;
+                        button {
+                            margin: 0;
+                            display: inline-block;
+                        }
+                        &:first-child {
+                            width: 187px;
+                        }
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .boxCon {
+                display: flex;
+                width: $full;
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .box {
+                    margin-bottom: 13px;
+                    cursor: pointer;
+                    margin-right: 13px;
+                    width: 255px;
+                    height: 74px;
+                    box-sizing: border-box;
+                    padding: 12px 15px;
+                    background-color: rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-radius: 10px;
+                    position: relative;
+                    .plus {
+                        text-align: center;
+                        width: 100%;
+                    }
+                    .mm {
+                        width: $full;
+                        height: $full;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        border-radius: 10px;
+                        border: 2px solid rgba(255, 255, 255, 0.1);
+                        opacity: 0;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        transition: 0.5s all;
+                        &:hover {
+                            opacity: 1;
+                            z-index: 99;
+                        }
+                        .delete {
+                            width: 31px;
+                            height: 31px;
+                            background-color: $black;
+                            border-radius: $full / 2;
+                            line-height: 31px;
+                            text-align: center;
+                            cursor: pointer;
+                            float: right;
+                            margin-top: 20px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .hand {
+                        border-radius: $full / 2;
+                        overflow: hidden;
+                        img {
+                            width: $full;
+                        }
+                    }
+                    .info {
+                        margin-left: 8px;
+                        .tt {
+                            white-space: nowrap;
+                            font-weight: 600;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            height: 15px;
+                            font-size: 14px;
+                            margin-bottom: 3px;
+                        }
+                        .word {
+                            font-weight: 300;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .disable {
+                    opacity: 0.5;
+                }
+            }
+            .innerInput {
+                display: inline-block;
+                .basicInp {
+                    @include inputStyle(351px);
+                }
+            }
+            .inner {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 22px;
+                color: $white;
+                > div {
+                    margin: 0;
+                }
+                .innerInput {
+                    width: 223px;
+                }
+                .pubInput {
+                    margin-right: 10px;
+                    width: 273px;
+                }
+                .pubInput2 {
+                    width: 112px;
+                }
+                .longInput {
+                    width: 664px;
+                }
+                .blue {
+                    font-weight: 600;
+                    color: #00fffc;
+                }
+                .spanUp {
+                    display: inline-block;
+                    padding-top: 5px;
+                }
+                button {
+                    margin: 0 0 0 15px;
+                    display: inline-block;
+                }
+                select {
+                    color: white;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .showMore {
+        display: block;
+        width: $full;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        color: #0073e6;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.buttonCon {
+    text-align: center;
+    padding-bottom: 30px;
+    button {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+.displayflex {
+    display: flex;
+    align-items: center;
+}
+.marginTop15 {
+    margin-top: 15px;
+}

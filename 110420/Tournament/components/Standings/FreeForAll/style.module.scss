@@ -1,0 +1,172 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+// @import "./tableStyle.module.scss";
+
+.box {
+    width: 100%;
+    max-width: 1225px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 20px;
+
+    .bracketsContainer {
+        background-color: transparent;
+        margin-top: 20px;
+    }
+
+    h2 {
+        @include titleSpace(8px, 4px);
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        letter-spacing: -0.09px;
+        color: #fff;
+    }
+}
+
+.customWindowContentClass {
+    > div {
+        margin: 0;
+    }
+}
+
+.tabContainer {
+    @include flexBlock(center, space-between);
+    margin-bottom: 16px;
+
+    .leftCol {
+        width: 17%;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #fff;
+        margin-top: 14px;
+        padding-bottom: 3px;
+        border-bottom: solid 1.5px #828990;
+    }
+
+    .rightCol {
+        width: 83%;
+
+        > div {
+            display: block;
+
+            > div {
+                margin-left: -5px;
+
+                li {
+                    padding: 5px 35px;
+                }
+            }
+        }
+    }
+}
+
+.total {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.07px;
+    color: #00fffc;
+}
+
+.rankBlock {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.07px;
+    text-align: right;
+
+    span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.userBlock {
+    @include flexBlock(center, flex-start);
+
+    span {
+        margin-left: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.07px;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.statusBlock {
+    @include flexBlock(center, center);
+    margin-top: 2px;
+
+    span {
+        margin-left: 4px;
+
+        &.rise {
+            color: #3ead18;
+        }
+
+        &.down {
+            color: #cd2524;
+        }
+    }
+}
+
+.groupContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    .row {
+        width: 100%;
+        margin-bottom: 16px;
+        background-color: rgba(11, 65, 96, 0.3);
+        border-radius: 10px;
+        padding: 16px 16px 4px 16px;
+
+        .titleBar {
+            h4 {
+                @include titleSpace(0px, 12px);
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 600;
+                letter-spacing: -0.07px;
+                color: #fff;
+                display: inline-block;
+                width: 145px;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: -0.07px;
+
+                &.green {
+                    color: #3ead18;
+                }
+
+                &.yellow {
+                    color: #e59229;
+                }
+            }
+        }
+    }
+}
+
+.cardContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 698px;
+    margin: 25px auto;
+    position: relative;
+
+    // height: 540px;
+}
+
+@include breakpoint(nb) {
+    .groupContainer {
+        width: 1107px;
+    }
+}

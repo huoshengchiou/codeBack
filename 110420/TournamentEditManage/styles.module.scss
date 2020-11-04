@@ -1,0 +1,90 @@
+@import 'src/components/App/theme';
+@import 'src/components/App/_mixins';
+
+.box {
+    width: 100%;
+    margin-top: 25px;
+    position: relative;
+}
+
+.contentbox {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boSelect {
+    width: 223px;
+}
+.displayflex {
+    display: flex;
+    align-items: center;
+}
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.padding0 {
+    > td {
+        padding-bottom: 0 !important;
+    }
+}
+.marginBottom {
+    margin-bottom: 0 !important;
+}
+
+.displayWidth0 {
+    width: 0;
+}
+
+.marginLeft36 {
+    margin-left: 36px;
+}
+
+.text_center {
+    display: flex;
+    justify-content: center;
+}
+
+.energyBar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(11, 65, 96, 0.3);
+    border-radius: 10px;
+    width: $full;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: $full;
+    margin-top: 30px;
+    .left {
+        font-size: 14px;
+        font-weight: 300;
+        width: $full;
+        .bar {
+            width: $full;
+            margin-top: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 9px;
+            .power {
+                background-color: #00fffc;
+                height: $full;
+                width: 45%;
+            }
+        }
+    }
+    .right {
+        font-size: 30px;
+        font-weight: 600;
+        color: $white;
+        margin-left: 35px;
+        span {
+            font-size: 16px;
+        }
+    }
+}

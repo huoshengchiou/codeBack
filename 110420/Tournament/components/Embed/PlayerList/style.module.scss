@@ -1,0 +1,277 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.box {
+  width: 100%;
+  max-width: 1225px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  margin-top: 20px;
+}
+
+
+.customWindowContentClass {
+  > div {
+    margin: 0;
+  }
+}
+
+.block{
+  width: 85vw;
+  // height: 100px;
+  background: rgba(11, 65, 96, 0.3);
+  padding: 18px 0 10px 0;
+  border-radius: 10px ;
+  margin-top: 15px;
+  }
+
+.teamListBanner{
+  width: 90%;
+  height: 78px;
+  margin: 0 0 15px 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    li{
+      height: 100%;
+      &:nth-child(1){
+        width: 7%;
+        line-height: 78px;
+      }
+      &:nth-child(2){
+        width: 7%;
+          div{
+            @include linearBox(78px, 50%);
+            &.teamAvatar{
+              width: 68px;
+              height: 68px;
+              // background: white;
+              border: 5px solid white;
+              overflow: hidden;
+            }
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            } 
+          }
+         
+      }
+      &:nth-child(3){
+        padding-left: 15px;
+        width: 20%;
+        line-height: 78px;
+      }
+    }
+  }
+}
+
+
+
+.title{
+  width: 98%;
+  height: 60px;
+  // background: white;
+  margin: 0 ;
+  margin-left: 10px;
+  color: white;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 600;
+  ul{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    li{
+      height: 100%;
+      margin: auto;
+      &:nth-child(1){
+        width: 10%;
+        text-align: center;
+      }
+      &:nth-child(2){
+        width: 30%;
+        padding-left: 10px;
+      }
+      &:nth-child(3){
+        width: 30%;
+      }
+      &:nth-child(4){
+        width: 30%;
+      }
+    }
+  }
+}
+
+
+.PList{
+width: 98%;
+// min-height: 80vh;
+// background: lightgreen;
+margin: 0;
+margin-left: 10px;
+font-size: 14px;
+font-weight: 600;
+
+}
+
+.PUnit{
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 70px;
+  ul{
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+    li{
+      height: 100%;
+      margin: auto;
+      align-items: center;
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:nth-child(1){
+        width: 10%;
+      // background: red;
+      text-align: center;
+      line-height: 60px;
+      }
+      &:nth-child(2){
+        width: 30%;
+        // background: blue;
+        padding-left: 10px;
+        display: flex;
+         div{
+           width: 48px;
+           height: 48px;
+           border-radius: 50%;
+           border: 2px solid #126174;
+          //  background: lightpink;
+          overflow: hidden;
+
+         }
+         img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+         }
+         p{
+           padding-left: 10px;
+         }
+      }
+      &:nth-child(3){
+        width: 30%;
+      // background: green;
+      line-height: 60px;
+
+      }
+      &:nth-child(4){
+        width: 30%;
+      // background: lightblue;
+      line-height: 60px;
+
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.manTable {
+  width: 300px;
+  border-spacing: 0;
+  margin-top: 15px;
+  color:black
+  tr {
+      &:first-child {
+          td {
+              background-color: rgba(255, 255, 255, 0.1);
+              font-weight: 600;
+              height: 55px;
+          }
+      }
+      td {
+          height: 70px;
+          box-sizing: border-box;
+          color: $white;
+          font-size: 14px;
+          font-weight: 300;
+          padding-left: 50px;
+          vertical-align: middle;
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+          &:first-child {
+              width: 380px;
+          }
+          &:nth-child(2) {
+              width: 205px;
+          }
+          .flex {
+              height: $full;
+              width: $full;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              .manBox {
+                  overflow: hidden;
+                  border-radius: $full / 2;
+                  width: 48px;
+                  height: 48px;
+                  margin-right: 10px;
+                  border: 2px solid #126174;
+                  img {
+                      width: $full;
+                  }
+              }
+          }
+          span {
+              font-size: 20px;
+          }
+      }
+  }
+}
+
+
+
+.logoBar{
+  width: 100vw;
+  min-height: 10vh;
+  border-bottom:1px solid white;
+  padding-top: 1%;
+  .logoWrapper{
+    width: 155px;
+    height: 34px;
+    overflow: hidden;
+ 
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

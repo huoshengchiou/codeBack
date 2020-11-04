@@ -1,0 +1,45 @@
+@import "src/components/App/theme";
+@import "src/components/App/_mixins";
+
+.box {
+    max-width: 1225px;
+    position: relative;
+    overflow: auto;
+    max-height: 700px;
+    background: transparent;
+    .bracketsContainer {
+        background: #062d45;
+        border-radius: 10px;
+        height: 100%;
+        margin-top: 20px;
+        .bracketArea {
+            overflow: auto;
+            max-height: 500px;
+        }
+    }
+}
+
+.displayflex {
+    display: flex;
+    align-items: center;
+}
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.padding0 {
+    > td {
+        padding-bottom: 0 !important;
+    }
+}
+.marginBottom {
+    margin-bottom: 0 !important;
+}
+
+.displayWidth0 {
+    width: 0;
+}
+
+.marginLeft36 {
+    margin-left: 36px;
+}
