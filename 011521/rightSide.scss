@@ -1,0 +1,42 @@
+@import "src/components/App/mixins";
+
+.listInfo {
+  @include flexBlock(center, space-between);
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  p {
+    @include titleSpace(0, 0);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: -0.07px;
+  }
+  > div {
+    @include flexBlock(center, flex-end);
+    p {
+      margin-right: 10px;
+    }
+    > div {
+      width: 288px;
+    }
+  }
+}
+.listWrapper {
+  width: 100%;
+  padding-top: 18px;
+
+  > div {
+    margin-bottom: 14px;
+    padding: 0 0 16px 16px;
+  }
+}
+.moreBtn {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0073e6;
+  cursor: pointer;
+}
